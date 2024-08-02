@@ -1,6 +1,6 @@
 # US Employment Discrimination Cases Dataset
 
-This dataset contains metadata information about employment discrimination cases in the United States. The data has been collected from [CourtListener.com](https://www.courtlistener.com/), focusing on precedential opinions. The dataset covers cases from May 2, 1785, to August 1, 2024.
+This dataset contains metadata information about employment discrimination cases in the United States. The data has been collected from [CourtListener.com](https://www.courtlistener.com/), focusing on precedential opinions. The dataset has 167,093 cases from May 2, 1785, to August 1, 2024.
 
 ## Source
 
