@@ -2,6 +2,9 @@
 
 Web scraper designed to extract employment discrimination case data from the Court Listener website. It uses asynchronous programming and the Playwright library to navigate and scrape web pages while simulating human-like behavior to avoid detection.
 
+## Dataset
+Find the dataset on [here](https://huggingface.co/datasets/nijdarshan/us-employment-discrim-precedents)
+
 ## Features
 
 - Asynchronous scraping using `asyncio` and Playwright
