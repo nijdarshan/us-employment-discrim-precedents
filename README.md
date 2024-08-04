@@ -1,46 +1,78 @@
-# US Employment Discrimination Cases Dataset
+# Web Scraper for Court Listener
 
-This dataset contains metadata information about employment discrimination cases in the United States. The data has been collected from [CourtListener.com](https://www.courtlistener.com/), focusing on precedential opinions. The dataset has 167,093 cases from May 2, 1785, to August 1, 2024.
+Web scraper designed to extract employment discrimination case data from the Court Listener website. It uses asynchronous programming and the Playwright library to navigate and scrape web pages while simulating human-like behavior to avoid detection.
 
-## Source
+## Features
 
-- **Website**: CourtListener.com
-- **Data Type**: Precedential opinions
-- **Subject Matter**: Employment discrimination cases
-- **Date Range**: 1785-05-02 to 2024-08-01
+- Asynchronous scraping using `asyncio` and Playwright
+- Date range-based scraping
+- Automatic pagination handling
+- Human-like behavior simulation (mouse movements, scrolling)
+- User-agent rotation
+- Error handling and retry mechanism
+- CAPTCHA solving capability (placeholder)
+- Saves scraped content as HTML files
 
-## Column Descriptions
+## Requirements
 
-| Column Name | Description |
-|-------------|-------------|
-| source_file | The name of the HTML file from which the data was extracted |
-| permalink | The unique URL for the opinion on CourtListener.com |
-| name | The case name, typically in the format "Party A v. Party B" |
-| date_filed | The date the opinion was filed, in YYYY-MM-DD format |
-| status | The status of the opinion, which is "Precedential" for all entries in this dataset |
-| citations | The official citation(s) for the opinion |
-| docket_number | The docket number assigned to the case |
-| description | A brief excerpt or summary of the case, often mentioning key aspects related to employment discrimination |
+- Python 3.7+
+- Playwright
+- asyncio
 
-## Notes
+## Installation
 
-- All opinions in this dataset are of "Precedential" status, meaning they can be cited as legal authority in future cases.
-- The dataset spans over two centuries, providing a comprehensive historical view of employment discrimination case law in the United States.
-- The 'description' field may contain keywords related to discrimination, employment, or specific protected characteristics relevant to the case.
+1. Clone this repository:
+   ```
+   git clone https://github.com/yourusername/advanced-court-listener-scraper.git
+   cd advanced-court-listener-scraper
+   ```
 
+2. Install the required packages:
+   ```
+   pip install playwright asyncio
+   ```
 
-## License
-This dataset is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). This means you are free to:
+3. Install Playwright browsers:
+   ```
+   playwright install
+   ```
 
-- Share — copy and redistribute the material in any medium or format
-- Adapt — remix, transform, and build upon the material for any purpose, even commercially
+## Usage
 
-Under the following terms:
+1. Modify the `main()` function in the script to set your desired parameters:
+   - `base_url`: The base URL for Court Listener search results
+   - `start_date`: The start date for your search range
+   - `end_date`: The end date for your search range
 
-- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+2. Run the script:
+   ```
+   python advanced_scraper.py
+   ```
 
-For more details, please see the full license text at: https://creativecommons.org/licenses/by/4.0/
+3. The script will create a `scraped_pages` directory and save the HTML content of each scraped page as separate files.
+
+## Configuration
+
+- User Agents: Add or modify the list of user agents in the `AdvancedScraper` class to expand the rotation.
+- Proxies: If you want to use proxies, add them to the `proxies` list in the `AdvancedScraper` class.
+
+## Customization
+
+- CAPTCHA Solving: Implement your CAPTCHA solving logic in the `solve_captcha` method if needed.
+- Scraping Logic: Modify the `scrape_page` method to extract specific data from the pages if required.
+
+## Ethical Considerations
+
+This scraper is designed for educational and research purposes. Always respect the website's terms of service and robots.txt file. Consider implementing rate limiting and be mindful of the load you put on the target website.
 
 ## Disclaimer
 
-While efforts have been made to ensure accuracy, users should verify critical information against original sources before relying on it for legal or academic purposes.
+This tool is provided as-is, without any guarantees or warranty. The authors are not responsible for any damage or data loss incurred from using this scraper. Use at your own risk and responsibility.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/yourusername/advanced-court-listener-scraper/issues) if you want to contribute.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
