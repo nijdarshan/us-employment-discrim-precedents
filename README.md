@@ -49,7 +49,7 @@ Find the dataset on [here](https://huggingface.co/datasets/nijdarshan/us-employm
 
 2. Run the script:
    ```
-   python advanced_scraper.py
+   python scrape-courtlistener.py
    ```
 
 3. The script will create a `scraped_pages` directory and save the HTML content of each scraped page as separate files.
